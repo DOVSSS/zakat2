@@ -94,7 +94,7 @@ const isBelowNisab = parseFloat(money || "0") < nisab;
           }}
         >
           <Typography variant="h4" align="center" gutterBottom>
-            Калькулятор Закята (زكاة)
+           
           </Typography>
 
           {loading ? (
@@ -113,15 +113,15 @@ const isBelowNisab = parseFloat(money || "0") < nisab;
               sx={{ color: "#333", fontWeight: 500 }}
               gutterBottom
             >
-              🟡 Цена золота: <b>{goldPriceGr.toFixed(2)} ₽/г</b> • Нисаб:{" "}
+              🟡 Дешийн мах: <b>{goldPriceGr.toFixed(2)} ₽/г</b> • Нисаб:{" "}
               <b>{nisab.toFixed(2)} ₽</b>
             </Typography>
           )}
 
           {!loading && isBelowNisab && money && (
             <Alert severity="info" sx={{ mt: 2 }}>
-              <AlertTitle>Внимание</AlertTitle>
-              Сумма не достигла нисаба — закят на деньги не обязателен.
+              <AlertTitle>Таьрго е</AlertTitle>
+              Закат т1аь дац
             </Alert>
           )}
 
@@ -130,7 +130,7 @@ const isBelowNisab = parseFloat(money || "0") < nisab;
               <Box display="flex" flexDirection="column" alignItems="center">
                 <AttachMoneyIcon fontSize="large" color="primary" />
                 <TextField
-                  label="Деньги (₽)"
+                  label="Ахч (₽)"
                   type="number"
                   value={money}
                   onChange={(e) => setMoney(e.target.value)}
@@ -143,7 +143,7 @@ const isBelowNisab = parseFloat(money || "0") < nisab;
               <Box display="flex" flexDirection="column" alignItems="center">
                 <PetsIcon fontSize="large" color="success" />
                 <TextField
-                  label="Овцы"
+                  label="Устаг1"
                   type="number"
                   value={sheep}
                   onChange={(e) => setSheep(e.target.value)}
@@ -156,7 +156,7 @@ const isBelowNisab = parseFloat(money || "0") < nisab;
               <Box display="flex" flexDirection="column" alignItems="center">
                 <AgricultureIcon fontSize="large" color="warning" />
                 <TextField
-                  label="Коровы"
+                  label="Бежан"
                   type="number"
                   value={cows}
                   onChange={(e) => setCows(e.target.value)}
@@ -177,10 +177,10 @@ const isBelowNisab = parseFloat(money || "0") < nisab;
               bgcolor: "#f0f4ff",
             }}
           >
- <Typography variant="h6">💼 Ваш закят:</Typography>
-            <Typography>💰 Деньги: {result.money} ₽</Typography>
-            <Typography>🐑 Овцы: {result.sheep}</Typography>
-            <Typography>🐄 Коровы: {result.cows}</Typography>
+ <Typography variant="h6">💼 Хьан закат:</Typography>
+            <Typography>💰 Ахч: {result.money} ₽</Typography>
+            <Typography>🐑 Уьстаг1: {result.sheep}</Typography>
+            <Typography>🐄 Бежан: {result.cows}</Typography>
           </Paper>
 
           <Box textAlign="center" mt={3}>
@@ -196,7 +196,7 @@ const isBelowNisab = parseFloat(money || "0") < nisab;
                 px: 4,
               }}
             >
-              Рассчитать زكاة
+              Лара
             </Button>
           </Box>
         </Paper>
